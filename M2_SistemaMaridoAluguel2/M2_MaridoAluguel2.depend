@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1716852777 source:c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\main.cpp
+	<iostream>
+	"TAD_Lista.h"
+	"Sistema.h"
+	<fstream>
+	"arq.h"
+	<locale.h>
+
+1716854113 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\tad_lista.h
+	<iostream>
+	<ctime>
+
+1716858284 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\sistema.h
+	"Cliente.h"
+	"Contrato.h"
+	"TrabalhadorEspecifico.h"
+	"TAD_Lista.h"
+
+1715818246 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\cliente.h
+	"Pessoa.h"
+
+1716856243 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\pessoa.h
+	<iostream>
+
+1716510792 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\trabalhadorespecifico.h
+	"Trabalhador.h"
+
+1716510792 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\trabalhador.h
+	"Pessoa.h"
+
+1716346987 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\contrato.h
+	"Sistema.h"
+	"Cliente.h"
+	"Trabalhador.h"
+
+1716673553 c:\users\usuarios\onedrive - univali\univali\2024 iii\poo\m2_maridoaluguel2\arq.h
+	"Sistema.h"
+	"TAD_Lista.h"
+	<fstream>
+	<iomanip>
+	<iostream>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+
