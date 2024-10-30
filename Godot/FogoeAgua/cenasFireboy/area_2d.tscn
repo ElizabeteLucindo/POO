@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c34j0sofx1gmu"]
+
+[ext_resource type="Script" path="res://scriptFireboy/area_2d.cs" id="1_ug0r6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsbfh"]
+size = Vector2(142, 26)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ug0r6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(61, 3)
+shape = SubResource("RectangleShape2D_qsbfh")
+
+[connection signal="body_entered" from="." to="." method="EntrouArea"]

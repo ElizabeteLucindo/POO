@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dotrelko3apmg"]
+
+[ext_resource type="Texture2D" uid="uid://b1o633i1mmh7d" path="res://imagensFireboy/diamante_vermelho-removebg-preview.png" id="1_hxiin"]
+[ext_resource type="Script" path="res://scriptFireboy/diamante.cs" id="1_wvd4f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22et3"]
+radius = 16.0
+height = 34.0
+
+[node name="Diamante" type="Area2D"]
+script = ExtResource("1_wvd4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48.625, 47.6563)
+scale = Vector2(0.0768678, 0.0929878)
+texture = ExtResource("1_hxiin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(48, 46)
+shape = SubResource("CapsuleShape2D_22et3")
+
+[connection signal="body_entered" from="." to="." method="Coletada"]

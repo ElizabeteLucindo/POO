@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0xjii45bjpvf"]
+
+[ext_resource type="FontFile" uid="uid://c6k0ioc6lgv5d" path="res://imagensFireboy/fonte/visitor1.ttf" id="1_6lb7b"]
+[ext_resource type="Theme" uid="uid://dnmrwm353wya4" path="res://imagensFireboy/fonte/game_overBotaos.tres" id="2_bs0i5"]
+[ext_resource type="Script" path="res://scriptFireboy/ButtonMenuGameOverF.cs" id="3_wljdk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_drvr5"]
+font = ExtResource("1_6lb7b")
+font_size = 40
+font_color = Color(1, 1, 0.0156863, 1)
+
+[node name="Game over!" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 3.0
+offset_right = 1154.0
+offset_bottom = 644.0
+color = Color(0.00351917, 0.00351917, 0.00351917, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 492.0
+offset_top = 290.0
+offset_right = 723.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER!"
+label_settings = SubResource("LabelSettings_drvr5")
+
+[node name="ButtonMenuGameOverF" type="Button" parent="."]
+offset_left = 559.0
+offset_top = 374.0
+offset_right = 643.0
+offset_bottom = 406.0
+theme = ExtResource("2_bs0i5")
+theme_override_colors/font_color = Color(1, 1, 0.254902, 1)
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+script = ExtResource("3_wljdk")
+
+[connection signal="pressed" from="ButtonMenuGameOverF" to="ButtonMenuGameOverF" method="menu_gameover_f"]

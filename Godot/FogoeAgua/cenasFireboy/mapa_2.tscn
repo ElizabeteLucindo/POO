@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=3 uid="uid://1v03g0u348y"]
+
+[ext_resource type="PackedScene" uid="uid://lxeqeg6dyief" path="res://cenasFireboy/tile_map.tscn" id="1_rkvb6"]
+[ext_resource type="Texture2D" uid="uid://ckasifg4pwbs4" path="res://imagensFireboy/canvas3.png" id="2_r5qmx"]
+[ext_resource type="PackedScene" uid="uid://c34j0sofx1gmu" path="res://cenasFireboy/area_2d.tscn" id="3_45f5p"]
+[ext_resource type="PackedScene" uid="uid://dotrelko3apmg" path="res://cenasFireboy/diamante.tscn" id="4_huoey"]
+[ext_resource type="Texture2D" uid="uid://bdfy6lfy5rmph" path="res://imagensFireboy/espinho_ok-removebg-preview.png" id="5_npipq"]
+[ext_resource type="PackedScene" uid="uid://bhtw0ma46mxh3" path="res://cenasFireboy/porta.tscn" id="6_kd4iu"]
+[ext_resource type="PackedScene" uid="uid://ba2rnihymce80" path="res://cenasFireboy/jogadorFireboy.tscn" id="7_6lxw3"]
+
+[node name="Mapa_2" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileMap" parent="." instance=ExtResource("1_rkvb6")]
+
+[node name="rio" type="Sprite2D" parent="."]
+position = Vector2(-24.5, 288)
+scale = Vector2(0.953333, 0.2)
+texture = ExtResource("2_r5qmx")
+
+[node name="rio2" type="Sprite2D" parent="."]
+position = Vector2(-185.25, -144)
+scale = Vector2(0.736667, 0.213334)
+texture = ExtResource("2_r5qmx")
+
+[node name="Areas" type="Node" parent="."]
+
+[node name="Area2D" parent="Areas" instance=ExtResource("3_45f5p")]
+position = Vector2(-85, 284)
+scale = Vector2(0.986309, 1.08465)
+
+[node name="Area2D2" parent="Areas" instance=ExtResource("3_45f5p")]
+position = Vector2(-278, 37)
+scale = Vector2(0.451995, 0.605096)
+
+[node name="Area2D3" parent="Areas" instance=ExtResource("3_45f5p")]
+position = Vector2(22, -172)
+scale = Vector2(0.458527, 0.70257)
+
+[node name="Area2D4" parent="Areas" instance=ExtResource("3_45f5p")]
+position = Vector2(-232, -148)
+scale = Vector2(0.772505, 1.13764)
+
+[node name="Diamantes" type="Node2D" parent="."]
+
+[node name="Diamante" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-455, 205)
+
+[node name="Diamante2" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-330, 205)
+
+[node name="Diamante3" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-406, -19)
+
+[node name="Diamante4" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-503, -72)
+
+[node name="Diamante5" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-204, 205)
+
+[node name="Diamante6" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(26, 206)
+
+[node name="Diamante7" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-339, -233)
+
+[node name="Diamante8" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(154, 202)
+
+[node name="Diamante9" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-183, -231)
+
+[node name="Diamante10" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(380, 203)
+
+[node name="Diamante11" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(271, 202)
+
+[node name="Diamante12" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(309, 12)
+
+[node name="Diamante13" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(476, 121)
+
+[node name="Diamante14" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(202, 9)
+
+[node name="Diamante15" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(102, 12)
+
+[node name="Diamante16" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-50, -47)
+
+[node name="Diamante17" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-202, -21)
+
+[node name="Diamante18" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-304, -63)
+
+[node name="Diamante19" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(-54, -232)
+
+[node name="Diamante20" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(80, -232)
+
+[node name="Diamante21" parent="Diamantes" instance=ExtResource("4_huoey")]
+position = Vector2(219, -232)
+
+[node name="Espinhos" type="Sprite2D" parent="."]
+position = Vector2(-250, 40)
+scale = Vector2(0.147, 0.078)
+texture = ExtResource("5_npipq")
+
+[node name="Espinhos2" type="Sprite2D" parent="."]
+position = Vector2(52, -168)
+scale = Vector2(0.147, 0.078)
+texture = ExtResource("5_npipq")
+
+[node name="Porta" parent="." instance=ExtResource("6_kd4iu")]
+position = Vector2(481, -210)
+
+[node name="JogadorFireboy" parent="." instance=ExtResource("7_6lxw3")]
+position = Vector2(-463, 238)

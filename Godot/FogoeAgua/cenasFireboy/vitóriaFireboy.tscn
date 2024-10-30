@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl4h0iajs0hc7"]
+
+[ext_resource type="FontFile" uid="uid://c6k0ioc6lgv5d" path="res://imagensFireboy/fonte/visitor1.ttf" id="1_f8mlo"]
+[ext_resource type="Theme" uid="uid://dnmrwm353wya4" path="res://imagensFireboy/fonte/game_overBotaos.tres" id="2_8yyay"]
+[ext_resource type="Script" path="res://scriptFireboy/ButtonMenuVitoriaF.cs" id="3_bd1ub"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xopeo"]
+font = ExtResource("1_f8mlo")
+font_size = 40
+font_color = Color(1, 1, 0, 1)
+
+[node name="Vitória" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -10.0
+offset_top = -15.0
+offset_right = 1146.0
+offset_bottom = 651.0
+color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 452.0
+offset_top = 307.0
+offset_right = 724.0
+offset_bottom = 343.0
+text = "VOCÊ GANHOU!"
+label_settings = SubResource("LabelSettings_xopeo")
+
+[node name="ButtonMenuVitoriaF" type="Button" parent="."]
+offset_left = 559.0
+offset_top = 396.0
+offset_right = 631.0
+offset_bottom = 427.0
+theme = ExtResource("2_8yyay")
+theme_override_colors/font_color = Color(0.980392, 0.980392, 0.172549, 1)
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+script = ExtResource("3_bd1ub")
+
+[connection signal="pressed" from="ButtonMenuVitoriaF" to="ButtonMenuVitoriaF" method="menu_vitoria_f"]

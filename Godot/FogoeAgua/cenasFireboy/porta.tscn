@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhtw0ma46mxh3"]
+
+[ext_resource type="Script" path="res://scriptFireboy/porta.cs" id="1_pfrbn"]
+[ext_resource type="Texture2D" uid="uid://cx83cbc5q4hur" path="res://imagensFireboy/2-removebg-preview.png" id="1_rw4fl"]
+[ext_resource type="Texture2D" uid="uid://cfujlhe0fgmie" path="res://imagensFireboy/1-removebg-preview.png" id="2_rjmm8"]
+[ext_resource type="Texture2D" uid="uid://dcgbl6sqq0yuy" path="res://imagensFireboy/3-removebg-preview.png" id="3_xqjxl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnv70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rw4fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rjmm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xqjxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rw4fl")
+}],
+"loop": true,
+"name": &"abriu",
+"speed": 3.99
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rw4fl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ykms"]
+size = Vector2(61, 90.75)
+
+[node name="Porta" type="Area2D"]
+script = ExtResource("1_pfrbn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -9)
+scale = Vector2(1.31319, 1.37879)
+sprite_frames = SubResource("SpriteFrames_bnv70")
+animation = &"abriu"
+frame_progress = 0.703554
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 2.625)
+shape = SubResource("RectangleShape2D_1ykms")
+
+[connection signal="body_entered" from="." to="." method="entrou_porta"]

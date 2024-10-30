@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bfshksvpvix58"]
+
+[ext_resource type="FontFile" uid="uid://c6k0ioc6lgv5d" path="res://imagensFireboy/fonte/visitor1.ttf" id="1_h2vxw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f0bf"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoldc"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0430392, 0.0430392, 0.0430391, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nkly"]
+bg_color = Color(0.205117, 0.205117, 0.205117, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.114897, 0.114897, 0.114897, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg2rx"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0295066, 0.0295066, 0.0295065, 1)
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_h2vxw")
+Button/styles/focus = SubResource("StyleBoxFlat_8f0bf")
+Button/styles/hover = SubResource("StyleBoxFlat_eoldc")
+Button/styles/normal = SubResource("StyleBoxFlat_7nkly")
+Button/styles/pressed = SubResource("StyleBoxFlat_sg2rx")
