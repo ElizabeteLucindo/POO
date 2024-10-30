@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdnmflj5574tn"]
+
+[ext_resource type="Script" path="res://Scripts/fantasma.cs" id="1_wkh6e"]
+[ext_resource type="Texture2D" uid="uid://dy35el1kdgivm" path="res://Imagens/fantasma-removebg-preview.png" id="1_yurmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv0wr"]
+size = Vector2(22, 26.375)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e01de"]
+radius = 65.0077
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7w3md"]
+radius = 11.0454
+
+[node name="fantasma" type="CharacterBody2D"]
+script = ExtResource("1_wkh6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 18)
+scale = Vector2(0.0677677, 0.0864198)
+texture = ExtResource("1_yurmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 17.8125)
+shape = SubResource("RectangleShape2D_uv0wr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 17)
+shape = SubResource("CircleShape2D_e01de")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(66, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-50, 26)
+shape = SubResource("CircleShape2D_7w3md")
+
+[connection signal="body_entered" from="Area2D" to="." method="visao"]
+[connection signal="body_exited" from="Area2D" to="." method="saiuVisao"]
+[connection signal="timeout" from="Timer" to="." method="ativaMovimento"]
+[connection signal="body_entered" from="Area2D2" to="." method="matou"]

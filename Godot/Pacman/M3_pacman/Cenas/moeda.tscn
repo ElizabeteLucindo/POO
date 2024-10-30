@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbql28ygt8yw6"]
+
+[ext_resource type="Script" path="res://Scripts/moeda.cs" id="1_1p61j"]
+[ext_resource type="Texture2D" uid="uid://dl4hiv5lmogu2" path="res://Imagens/pc-removebg-preview.png" id="2_og5j1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1xet"]
+radius = 8.0
+
+[node name="Moeda" type="Area2D"]
+script = ExtResource("1_1p61j")
+
+[node name="Canvas2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.979758, 0.998809, 1)
+position = Vector2(16, 16)
+scale = Vector2(0.0299625, 0.034188)
+texture = ExtResource("2_og5j1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("CircleShape2D_a1xet")
+
+[connection signal="body_entered" from="." to="." method="Coletada"]

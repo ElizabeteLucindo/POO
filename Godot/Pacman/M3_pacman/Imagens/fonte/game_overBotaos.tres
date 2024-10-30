@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cy4qgbfeuk8ny"]
+
+[ext_resource type="FontFile" uid="uid://c6k0ioc6lgv5d" path="res://Imagens/fonte/visitor1.ttf" id="1_q0y30"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vth3c"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw21v"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a5s6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4jge"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_q0y30")
+Button/styles/focus = SubResource("StyleBoxFlat_vth3c")
+Button/styles/hover = SubResource("StyleBoxFlat_dw21v")
+Button/styles/normal = SubResource("StyleBoxFlat_4a5s6")
+Button/styles/pressed = SubResource("StyleBoxFlat_i4jge")
